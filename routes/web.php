@@ -18,3 +18,4 @@ Route::get('/login', function () {
 // Auth::routes();
 
 Route::post('/login', 'UserController@login');
+Route::post('/register', 'UserController@register');
