@@ -470,7 +470,7 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.8.38",
+            "version": "v7.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
@@ -3695,7 +3695,7 @@
                 "symfony/console": "~2.8|~3.3|~4.0"
             },
             "require-dev": {
-                "laravel/framework": "5.8.*",
+                "laravel/framework": "7.0.*",
                 "nunomaduro/larastan": "^0.3.0",
                 "phpstan/phpstan": "^0.11",
                 "phpunit/phpunit": "~8.0"
