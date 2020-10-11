@@ -32,14 +32,20 @@ class UserController extends Controller
         $balance = 0;
         $role = "User";
 
-        DB::table('users')->insert([
-            'name' => $name,
-            'phone' => $phone,
-            'email' => $email,
-            'password' => bcrypt($password),
-            'role' => $role,
-            'balance' => $balance
-        ]);
-
+        try{
+            DB::table('users')->insert([
+                'name' => $name,
+                'phone' => $phone,
+                'email' => $email,
+                'password' => bcrypt($password),
+                'role' => $role,
+                'balance' => $balance
+            ]);
+        }
+        catch(Exception $e){
+            return json_encode(array("code" => 0, "message" => "Failed Register"));
+        }
+            
+        return json_encode(array("code" => 1, "message" => "Success Register"));
     }
 }
