@@ -25,9 +25,9 @@
 
                         <div class="form-group row d-flex justify-content-center">
                             <div class="col-md-10">
-                                <input id="name" placeholder="Phone Number" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="phone" placeholder="Phone Number" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus>
 
-                                @error('name')
+                                @error('phone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
