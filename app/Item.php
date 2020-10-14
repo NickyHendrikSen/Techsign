@@ -10,6 +10,8 @@ class Item extends Model
     protected $fillable = [
         'id',
         'sub_categories_id',
+        'users_id',
+        'description',
         'name',
         'photo',
         'price',

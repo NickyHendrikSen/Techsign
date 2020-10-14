@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Category;
 use App\SubCategory;
+use App\Item;
 
 class MainSeeder extends Seeder
 {
@@ -155,5 +156,15 @@ class MainSeeder extends Seeder
             'categories_id' => 4,
             'name' => 'Other',
         ));
+
+        Item::create([
+            'sub_categories_id' => 5,
+            'name' => 'Skylark',
+            'users_id' => 1,
+            'description' => "Powerfull skin.",
+            'price' => 3000000,
+            'delivery_price' => 0,
+            'stock' => 200
+        ]);
     }
 }
