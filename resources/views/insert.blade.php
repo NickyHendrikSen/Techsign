@@ -11,6 +11,7 @@
                     <form method="POST" action="/insert">
                         @csrf
 
+                        
                         <div class="form-group row d-flex justify-content-center">
                             <div class="col-md-10">
                                 <input id="name" placeholder="Name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
