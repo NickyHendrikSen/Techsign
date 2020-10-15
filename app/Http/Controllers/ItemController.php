@@ -47,6 +47,11 @@ class ItemController extends Controller
         return redirect()->back();
     }
 
+    function updateView(Request $request){
+        $item = Item::where('id', $id)->get();
+        return view('update', ["item" => $item]);
+    }
+
     function update(Request $request){
         try{
             $id = $request["id"];
@@ -60,7 +65,7 @@ class ItemController extends Controller
                 'stock' => $request->stock
             ]);
         }catch(Exception $e){
-            return json_encode(array("code" => 0,"message" => "Fail Delete"));
+            return json_encode(array("code" => 0,"message" => "Fail Update"));
         }
         return redirect()->back();
     }
