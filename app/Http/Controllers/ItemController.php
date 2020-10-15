@@ -46,4 +46,22 @@ class ItemController extends Controller
         }
         return redirect()->back();
     }
+
+    function update(Request $request){
+        try{
+            $id = $request["id"];
+            Item::where('id', $id)->update([
+                'sub_categories_id' => 5,
+                'users_id' => 1,
+                'name' => $request->name,
+                'description' => $request->description,
+                'price' => $request->price,
+                'delivery_price' => $request->dprice,
+                'stock' => $request->stock
+            ]);
+        }catch(Exception $e){
+            return json_encode(array("code" => 0,"message" => "Fail Delete"));
+        }
+        return redirect()->back();
+    }
 }
